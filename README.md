@@ -1,7 +1,7 @@
 # pio.js
 ---
 
-**Easily monitize any web site that has images. Brought to you by the good folks at [print.io](http://www.print.io).**
+**Easily monetize any web site that has images. Brought to you by the good folks at [print.io](http://www.print.io).**
 
 *Note -- This github is for documentation/issues/feature requests only. Source code is closed source.*
 
