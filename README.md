@@ -5,6 +5,13 @@
 
 *Note -- This github is for documentation/issues/feature requests only. Source code is closed source.*
 
+For an example, click the shopping cart on [hellopics.com](http://www.hellopics.com).
+
+## pio.js Features/Rationale
+
+The widget does not pollute any of the embedded page's CSS/JS. All of the JS is placed under the `PIO` namespace. 
+
+`pio.js` is pure javascript and weighs in at 4kb. Zero 3rd party JS files are used. In other words, this file does not include/need jquery, lodash, zepto, or any other lib. You will not have JS clash issues when you use this.
 
 
 ## Getting Started
