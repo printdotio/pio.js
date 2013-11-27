@@ -27,6 +27,7 @@ We recommend you place the code for embedding and configuring side by side.
 Here we are going to embed the script to use http/https, depending on the page its embedded in, and then configure the widget using the `PIO.config(options)` call.
 
 ````html
+<!-- this points to the print.io CDN, which supports both http/https -->
 <script src=”//az412349.vo.msecnd.net/widget-assets/pio.latest.js” />
 <script>
 PIO.config({
@@ -52,7 +53,7 @@ Closes the widget.
 Returns the user's current cart.
 
 ###PIO.getNumItems()
-Returns the current number of items in the user's cart.
+Returns the current number of items in the user's cart. It is recommended that this be used in conjunction with the options `fns.onCartChange()` callback-- `PIO.getNumItems()` is great for getting a pre-launched cart's items count wereas `fns.onCartChange()` is great for changing based on the user's live usage of the cart.
 
 
 
@@ -71,7 +72,7 @@ PIO.config({
 
 
     //optional
-    //predefined images
+    //predefined images -- should be an array of strings that are absolute urls
     images: [],
 
     //optional
@@ -134,3 +135,4 @@ PIO.config({
 
 ````
 
+Copyright 2012-2013 Breakout Commerce LLC
