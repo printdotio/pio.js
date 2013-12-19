@@ -42,6 +42,7 @@ Now that we have it configured, we can easily have the widget launch by attachin
 ````js
 $(function(){
     $('#myButton').on('click',function(){
+        //this will open the widget-- easy!
         PIO.open();
     });
 })
