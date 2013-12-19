@@ -37,6 +37,28 @@ PIO.config({
 </script>
 
 ````
+Now that we have it configured, we can easily have the widget launch by attaching the open function to a button:
+
+````js
+$(function(){
+    $('#myButton').on('click',function(){
+        PIO.open();
+    });
+})
+````
+
+Or perhaps we could pass an image into the widget when we open it:
+
+````js
+    $('img.clickable').on('click',function(){
+        //here we pass the src of the image that was clicked
+        PIO.open({
+            images:[$(this).attr('src')]
+        });
+    });
+````
+
+And thats it!
 
 ##API
 
