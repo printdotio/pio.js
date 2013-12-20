@@ -28,7 +28,7 @@ Here we are going to embed the script to use http/https, depending on the page i
 
 ````html
 <!-- this points to the print.io CDN, which supports both http/https -->
-<script src=”//az412349.vo.msecnd.net/widget-assets/pio.latest.js” />
+<script src=”//az412349.vo.msecnd.net/pio/pio.latest.js”></script>
 <script>
 PIO.config({
   // required -- api key
@@ -41,7 +41,8 @@ Now that we have it configured, we can easily have the widget launch by attachin
 
 ````js
 $(function(){
-    $('#myButton').on('click',function(){
+    $('#myButton').on('click',function(e){
+        e.preventDefault();
         //this will open the widget-- easy!
         PIO.open();
     });
@@ -51,7 +52,8 @@ $(function(){
 Or perhaps we could pass an image into the widget when we open it:
 
 ````js
-    $('img.clickable').on('click',function(){
+    $('img.clickable').on('click',function(e){
+        e.preventDefault();
         //here we pass the src of the image that was clicked
         PIO.open({
             images:[$(this).attr('src')]
@@ -85,7 +87,7 @@ Returns the current number of items in the user's cart. It is recommended that t
 **Important** These options can be passed in to either the `PIO.config(options)` function or the `PIO.open(options)` function. It is recommended that one pass in items like `images` or `items` to `PIO.open(options)` and pass in items like the `recipeId` and `fns` callback functions to `PIO.config(options)`.
 
 ````html
-<script src=”//az412349.vo.msecnd.net/widget-assets/pio.latest.js” />
+<script src=”//az412349.vo.msecnd.net/pio/pio.latest.js” />
 <script>
 PIO.config({
             
@@ -152,7 +154,7 @@ PIO.config({
 
     //optional
     // url of widget (can be staging or live)
-    url: 'http://staging.api.print.io/widget/'
+    url: 'http://staging.widget.print.io/widget/'
 });
 </script>
 
